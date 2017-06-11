@@ -9,6 +9,10 @@ Features :
 * Can change the message from a web page hosted on the ESP8266
 * Can clear the display so it no longer displays a message or revert to default.
 
+# Not very clear demo video
+
+Available here : https://youtu.be/cvs0KwTVzGU
+
 # Hardware
 
 I suggest you use a NodeMCU dev kit type board or Weemos D1 mini.  You can do this with a bare board but if you are doing that I assume you know what you are doing and can adapt this to your needs.   The following setup works here but I accept no liability for damage, loss or anything really :)  Any suggestions of improvements a gladly recieved. 

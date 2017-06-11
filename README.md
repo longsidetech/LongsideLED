@@ -1,9 +1,8 @@
 # LongsideLED
 
-This is a speedy way of building a scrolling LED sign using 8x8 led displays using the MAX7219 displays and ESP8266.  It was build originally to go in the window of studio 1 at Longside Radio ( http://longsideradio.co.uk ) and to be a simple way of displaying and updating a scrolling message.
+This is a speedy way of building a scrolling LED sign using 8x8 led displays modules using the MAX7219 chipset and an ESP8266 with the Arduino IDE.  It was build originally to go in the window of studio 1 at Longside Radio ( http://longsideradio.co.uk ) and to be a simple way of displaying and updating a scrolling message.
 
 Features : 
-* Written using the Arduino IDE
 * Captive portal for WiFI setup
 * IP address displayed on boot
 * Default message displayed on boot

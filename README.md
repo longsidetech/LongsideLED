@@ -32,9 +32,11 @@ I have tested this with upto 8 displays with a Lolin nodemcu ish type board and 
 
 I am assuming you have the Arduino IDE installed and the ESP8266 libraries installed too.  If you haven't there are lots of tutorials on this available.
 
-Download the repository from GitHub and also download and install the awesome LedMatrix library from here : https://github.com/squix78/MAX7219LedMatrix you will also need the very very awesome Wifimanager library : https://github.com/tzapu/WiFiManager
+Download the repository from GitHub and also download and install the awesome LedMatrix library from here : https://github.com/squix78/MAX7219LedMatrix * you will also need the very very awesome Wifimanager library : https://github.com/tzapu/WiFiManager
 
 Before you flash the code in the Arduino IDE scroll to the config section and update the number of modules you are using and the default message you want to display and the captive portal access point name. 
+
+* If you need to rotate the display because the scroll is working in the wrong axis then see the comments in the head of the code for the fix! 
 
 # Booting
 

@@ -16,8 +16,8 @@
 // If you have are using the individual modules then the below lib is fine,  if you have the 
 // integrated 4 matrixes already linked together or if you text is coming out sideways then
 // use the https://github.com/targetblank/MAX7219LedMatrix fork as the main one currently 
-// doesn't support rotation. If you do use the fork you need to enable the rotation in the 
-// main loop section. 
+// doesn't support rotation. If you do use the fork you need to set the rotation to true in the 
+// config section. 
 
 #include "LedMatrix.h"  // https://github.com/squix78/MAX7219LedMatrix
 
@@ -51,7 +51,7 @@ const char* capName = "LongsideLED";
 String webpageTitle = "Longside Radio LED sign";
 //
 // CHANGEME: If you need to rotate the display 90 degrees set this to true else false
-String ledRotate = "true";
+String ledRotate = "false";
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 

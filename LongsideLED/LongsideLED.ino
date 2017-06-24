@@ -49,6 +49,9 @@ const char* capName = "LongsideLED";
 //
 // CHANGEME: Webpage title
 String webpageTitle = "Longside Radio LED sign";
+//
+// CHANGEME: If you need to rotate the display 90 degrees set this to true else false
+String ledRotate = "true";
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -81,8 +84,10 @@ const char* myIpAddress(void)
 //Web handling
 void handleRoot() {
   String msg = server.arg("msg");
-  Serial.println(msg);  
+  Serial.println(msg);
+  if (msg.length() > 0) {  
   displayMessage = msg;
+  }
         server.send(200, "text/html", "<html><head><title>"
         +webpageTitle+
         "</title>"
@@ -151,6 +156,8 @@ void handleDefault(){
         "</head><body>" 
         "<p>"
         "<center>"
+        "<h3>Currently displaying:</h3><h2>"
+        +displayMessage+ 
         "<h3>What do you want to say?</h3>"
         "<form action='/'><p><input type='text' name='msg' autofocus> <input type='submit' value='Submit'>"
         "<a class=\"button button-outline\" href=\"/clear\" title=\"Clear Display\">Clear Display</a>"
@@ -187,8 +194,7 @@ void setup() {
 void loop() {
   server.handleClient();
   ledMatrix.clear();
-//  if your display is sideways then uncomment the following:  
-//  ledMatrix.setRotation("true");
+  ledMatrix.setRotation(ledRotate);
   ledMatrix.scrollTextLeft();
   ledMatrix.drawText();
   ledMatrix.commit();
